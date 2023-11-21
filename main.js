@@ -430,14 +430,14 @@ let dogNames = ["Fido", "Precious", "Sassy", "Gertrude", "Shadow", "Potato", "Ba
 // has to take in 2 parameters, a string and name of dogs so needs (dogString, dogNames) 
 // going to have to loop 
 // you're going to have to increment and have to set a variable to 0; 
-// REMEMBER: for(iterator; condition; incrementation)
 //CALL THE FUNCTION AT THE END. NOT A CONSOLE LONG. just like your whiteboard so call dogString and dogNames
 
 const dogNameFinder = (dogString, dogNames) => {
     let here = 0;
+    // REMEMBER: for(iterator; condition; incrementation)
     for(let i = 0; i < dogNames.length; i++){
         if (dogString.includes(dogNames[i])) {
-            console.log("Match " + dogNames[i]);
+            console.log("Matched " + dogNames[i]);
             here = 1;
         }
     }
@@ -447,6 +447,8 @@ const dogNameFinder = (dogString, dogNames) => {
 };
 
 dogNameFinder(dogString, dogNames)
+
+// 
 
 //keep getting Sally back but Sally is a cat not a dog. 
 
@@ -471,3 +473,37 @@ function removeEven(arr) {
 
 removeEven(arr)
 console.log(arr)
+
+// Codewars problems
+/** In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+*
+* Examples
+* makeNegative(1);    // return -1
+* makeNegative(-5);   // return -5
+* makeNegative(0);    // return 0
+* makeNegative(0.12); // return -0.12
+ * 
+ * 
+ */
+function makeNegative(num) {
+    if (num > 0){
+      return -num;
+    } else {
+      return num;
+    }
+}
+
+/** Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+*
+* Examples (input -> output)
+* 6, "I"     -> "IIIIII"
+* 5, "Hello" -> "HelloHelloHelloHelloHello"
+ * 
+ */
+
+function repeatStr (n, s) {
+    return s.repeat(n);
+  }
+
+
+
